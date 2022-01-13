@@ -25,15 +25,6 @@ class DecisionTreeCART :
         registro = {}
         for i in range(len(registroCSV)):
             registro.update({self.tabla.columns.tolist()[i]:registroCSV[i]})
-        print(self.cart.prediction(registro))
+        return self.cart.prediction(registro)
 
 
-main = DecisionTreeCART()
-main.learnDT(r"C:\Users\gonza\Documents\Informática\Aprendizaje\Práctica CART\Cart\ejemplo.csv", 2)
-print(main.drawDecisionTree())
-registro = [4, 6]
-main.prediction(registro)
-
-#rss, atr, s, verbose = tree.calcularNodo()
-#print (f'rss: {rss}, atr: {atr}, s: {s}')
-#print(verbose)

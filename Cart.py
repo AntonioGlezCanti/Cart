@@ -66,7 +66,7 @@ class Cart:
 
     def prediction(self,registroCSV):
         if not bool(self.hijos):
-            return (f'{self.atDec} : {self.nodo}')
+            return self.nodo
         else:
             valor = registroCSV.get(self.atributo)
             if valor < self.valor:
